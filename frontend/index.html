@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFHL Hierarchy Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">SRM Full Stack Engineering Challenge</p>
+          <h1>Hierarchy Analyzer</h1>
+          <p class="subtitle">
+            Paste a JSON payload with a <code>data</code> array of edges like
+            <code>A-&gt;B</code>, then submit it to the BFHL API.
+          </p>
+        </div>
+
+        <section class="panel">
+          <label for="jsonInput" class="label">Input JSON</label>
+          <textarea id="jsonInput" spellcheck="false">{
+  "data": ["A->B", "A->C", "B->D"]
+}</textarea>
+          <div class="actions">
+            <button onclick="analyzeData()" id="submit-button" type="button">
+              Analyze
+            </button>
+          </div>
+          <p id="status" class="status" aria-live="polite"></p>
+        </section>
+      </section>
+
+      <section class="output-card panel">
+        <div class="output-header">
+          <h2>API Response</h2>
+          <span class="badge">POST /bfhl</span>
+        </div>
+        <pre id="responseOutput">Submit a payload to see the formatted response here.</pre>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
