@@ -4,9 +4,9 @@ const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 const USER_ID = process.env.USER_ID || buildUserId();
-const EMAIL_ID = process.env.EMAIL_ID || "your_email@srmist.edu.in";
+const EMAIL_ID = process.env.EMAIL_ID || "YOUR_REAL_EMAIL@srmist.edu.in";
 const COLLEGE_ROLL_NUMBER =
-  process.env.COLLEGE_ROLL_NUMBER || "your_roll_number";
+  process.env.COLLEGE_ROLL_NUMBER || "YOUR_REAL_ROLL_NUMBER";
 
 const app = express();
 
